@@ -1,4 +1,6 @@
 BirkbeckRepo
 ============
 
-PiJ Exercises ALL DONE IN JAVA!! READ JAVA FILES in respective the "SRC" folders of each Lecture Folder. 
+PiJ Exercises ALL DONE IN JAVA!! 
+
+READ the JAVA FILES in the respective the "SRC" folders for each Lecture Folder. 
