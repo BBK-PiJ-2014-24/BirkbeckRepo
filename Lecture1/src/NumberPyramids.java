@@ -24,6 +24,9 @@ public class NumberPyramids {
 			System.out.println();
 		} // end i-loop	
 		
+		importConsole.close();
+		
+		
 	} // end main
 
 } // end class

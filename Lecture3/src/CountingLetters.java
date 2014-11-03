@@ -14,7 +14,8 @@ public class CountingLetters {
 		Scanner importConsole = new Scanner(System.in);
 		String str;	
 		int strLength;
-		char letterE = 'e';
+		char letterEsmall = 'e';
+		char letterEbig = 'E';
 		int countE = 0;
 		
 		System.out.println("Input Phrase: ");
@@ -23,12 +24,14 @@ public class CountingLetters {
 		strLength = str.length();
 		
 		for(int i = 0;i<strLength;i++){
-			char c = str.charAt(i);
-			if( Character.isLowerCase(letterE) || Character.isUpperCase(letterE))
+			Character c = str.charAt(i);
+			if( c.equals(letterEsmall) || c.equals(letterEbig))
 				countE++;
 		} // end loop
 		
 		System.out.println("The Number of \"e's\": " + countE);
+		
+		importConsole.close();
 		
 	} // end main
 } // end class

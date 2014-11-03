@@ -138,6 +138,7 @@ public class PokerScore {
 		else
 			System.out.println("No Groupings");
 		
+		importConsole.close();
 		
 	}// end main
 	

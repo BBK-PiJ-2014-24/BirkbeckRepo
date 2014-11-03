@@ -98,6 +98,8 @@ public class Primes1c {
 			System.out.println("Divergence: " + Diff);
 		}
 		
+		
+		importConsole.close();
 	} // end main
 
 } // end class

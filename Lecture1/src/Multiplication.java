@@ -30,6 +30,8 @@ public class Multiplication {
 			}
 		System.out.println();	
 		System.out.println(x + " * "+ y + " = " + total );	
+		
+		importConsole.close();
 			
 	} // end Main 
 

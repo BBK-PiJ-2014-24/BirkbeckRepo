@@ -67,6 +67,7 @@ public class InterestPayments {
 		System.out.println("Total Interest Cost: " + interestTotalBill);
 		System.out.println("All Interest Paid By Year: " + ip.calcPrincipalYear(startMortgage,amortize,interestTotalBill,r));
 		
+		importConsole.close();
 		
 	} // end main
 	

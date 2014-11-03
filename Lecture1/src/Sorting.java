@@ -58,6 +58,8 @@ public class Sorting {
 			System.out.println("High: " + pos1);
 			System.out.println("Med: " + pos2);
 			System.out.println("Low: " + pos3);
+			
+			importConsole.close();
 	} // end main
 				
 } // end Class
