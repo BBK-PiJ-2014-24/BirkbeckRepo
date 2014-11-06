@@ -60,16 +60,6 @@ public class InterestPayments {
 	// ------
 	
 	System.out.println("Total Mortgage Cost: " + totalTotal);
-	
-	
-		
-		
-	} // end main
-	
-	public double(double t, double c, double r ){
-		
-		
-		
-	}
 
+	} // end main
 } // end class

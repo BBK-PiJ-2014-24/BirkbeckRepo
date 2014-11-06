@@ -22,8 +22,6 @@ public class HanoiTowers {
 		Scanner importConsole = new Scanner(System.in);
 		int x;
 		int turns =0;
-
-		
 		
 		// input
 		// -----
@@ -34,8 +32,7 @@ public class HanoiTowers {
 		// Calc
 		// ----
 		
-		
-		
+		turns = h.countHanoiTurns(x+1, x, 0, 0);
 		importConsole.close();
 		
 	} // end main
@@ -51,20 +48,23 @@ public class HanoiTowers {
 			p2--; // p2->p3
 			p3++;
 			count+=6;
+			System.out.println("p1:" + p1 +" p2:"+ p2 + " p3:" + p3);
 			return count;
 		}
 		else{
 			int p = p3;
 			p1--; // p1->p2 
 			p2++;
+			System.out.println("p1:" + p1 +" p2:"+ p2 + " p3:" + p3);
 			p3 = p1; // Re-orientate the Disc Movement Method 
 			p1 = p2;
 			p2 = p;
 			count = countHanoiTurns(x-1, p1, p2, p3);	
-		}
-			
-			
+		}		
 		
+		return count;
+	} // end countHanoiTurns
+} // end Class
 		
 		
 		
@@ -81,7 +81,4 @@ public class HanoiTowers {
 */		
 		
 		
-		
-		return turns;
-	} // end countHanoiTurns
-} // end Class
+

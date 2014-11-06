@@ -25,7 +25,7 @@ public class Text2number {
 		
 		for(int i=0;i<strLength;i++){
 			char c = str.charAt(i);
-			if (!Character.isDigit(c))
+			if (!Character.isDigit(c));
 			
 		} // end loop
 		

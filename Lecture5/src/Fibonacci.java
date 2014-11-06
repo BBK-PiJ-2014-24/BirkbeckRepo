@@ -32,7 +32,7 @@ public class Fibonacci {
 		int fR = f.recursiveFibo(x);
 	
 		System.out.println("Fib(" + x + ")=  " + fI + " (Iterative)");
-		System.out.println("Fib(" + x + ")=  " + fI + " (Recursive)");
+		System.out.println("Fib(" + x + ")=  " + fR + " (Recursive)");
 		
 		importConsole.close();	
 		
