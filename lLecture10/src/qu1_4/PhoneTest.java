@@ -13,6 +13,11 @@ public class PhoneTest {
 		m.call("111-1111");
 		m.ringAlarm();
 		m.playGame("space invaders");
+		
+		System.out.println("\nSmartPhone Test");
+		SmartPhone s = new SmartPhone();
+		s.browseWeb("Amazon.com");
+		s.findPoistion();
 
 	}
 
