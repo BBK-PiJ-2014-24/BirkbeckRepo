@@ -21,6 +21,9 @@
  * 2.4 Downcasting
  * Inside the former method, downcast the object to Smartphone so that you can use all the 
  * public methods of Smartphone.
+ * 
+ * 2.5 Casting exception
+ * Create a MobilePhone object and then pass it to method testPhone(Phone). What happens?
  */
 package qu2;
 
@@ -37,9 +40,12 @@ public class PhoneTest2 {
 			pTest.launch();
 			
 			SmartPhone sp = new SmartPhone("Samsung");
-			
+			MobilePhone mp = new MobilePhone("Motorola");
 			System.out.println("\nUsing testPhone Method");
 			pTest.testPhone(sp);
+			pTest.testPhone(mp); // Can't Do As Wrong DownCasting
+			
+			
 	} // end main
 	
 	public void launch(){
