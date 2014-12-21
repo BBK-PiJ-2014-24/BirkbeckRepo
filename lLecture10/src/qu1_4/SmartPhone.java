@@ -2,6 +2,12 @@ package qu1_4;
 
 public class SmartPhone extends MobilePhone {
 	
+	public SmartPhone(String brand){
+		super(brand);
+	}
+	
+	
+	
 	@Override
 	public void call(String number){
 		String start = number.substring(0,2);
