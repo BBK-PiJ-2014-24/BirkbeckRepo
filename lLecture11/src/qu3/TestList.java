@@ -23,7 +23,14 @@ public class TestList {
 		d.deleteNode(3);
 		
 		d.count();
-
+		
+		
+		DoubleLinkedList<Integer> di = new DoubleLinkedList<Integer>();
+		Node<Integer> nInt0 = new Node<Integer>(0);
+		Node<Integer> nInt1 = new Node<Integer>(1);
+		
+		di.setHead(nInt0);
+		di.addNode(nInt1);
 	}
 
 }
