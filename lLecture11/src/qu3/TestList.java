@@ -4,6 +4,9 @@ public class TestList {
 
 	public static void main(String[] args) {
 		
+		// Interative
+		// ----------
+		
 		DoubleLinkedList<String> d = new DoubleLinkedList<String>();
 		
 		Node<String> n1 = new Node<String>("Hello");
@@ -31,6 +34,19 @@ public class TestList {
 		
 		di.setHead(nInt0);
 		di.addNode(nInt1);
+		
+		
+		// Recursive
+		// ---------
+		
+		 DoubleLinkedCircularRecursive<String> r = new DoubleLinkedCircularRecursive<String>("hello");
+		 r.add("world");
+		 r.add("this");
+		 r.add("is");
+		 r.add("java");
+		 r.add("universe");
+		 r.delete(2);
+		 
 	}
 
 }
