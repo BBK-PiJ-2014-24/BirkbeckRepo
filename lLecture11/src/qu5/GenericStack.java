@@ -6,7 +6,7 @@
 
 package qu5;
 
-public class stack<E extends Number> {
+public class GenericStack<E> {
 	
 	// Fields
 	// ------
@@ -16,7 +16,7 @@ public class stack<E extends Number> {
 	
 	// Constructor
 	// -----------
-	public stack(E e){
+	public GenericStack(){
 		top = null;
 		countNodes = 0;
 	}
@@ -71,11 +71,12 @@ public class stack<E extends Number> {
 
 	public void printStack(){
 		Node<E> n = top;
-		while(top.getNextNode()!=null){
-			System.out.println(top.getData());
+		while(n!=null){
+			System.out.println(n.getData());
 			n = n.getNextNode();
 		}		
 	}
+	
 	
 	
 }

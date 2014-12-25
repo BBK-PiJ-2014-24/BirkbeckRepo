@@ -1,6 +1,6 @@
 package qu5;
 
-public class Node<E extends Number> {
+public class Node<E> {
 	
 	// Fields
 	// ------
