@@ -25,6 +25,12 @@ public class testStack {
 		s.pop();
 		s.printStack();
 		
+		
+		// Test <E extends Number>
+		// -----------------------
+		
+	//	GenericStack<String> strStack = new GenericStack<String>();  WON'T WORK
+		
 
 	}
 

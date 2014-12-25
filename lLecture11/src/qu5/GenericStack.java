@@ -6,7 +6,7 @@
 
 package qu5;
 
-public class GenericStack<E> {
+public class GenericStack<E extends Number> {
 	
 	// Fields
 	// ------
