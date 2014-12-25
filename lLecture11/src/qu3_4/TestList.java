@@ -39,7 +39,7 @@ public class TestList {
 		// Recursive
 		// ---------
 		
-		 DoubleLinkedCircularRecursive<String> r = new DoubleLinkedCircularRecursive<String>("hello");
+		 DoubleLinkedRecursive<String> r = new DoubleLinkedRecursive<String>("hello");
 		 r.add("world");
 		 r.add("this");
 		 r.add("is");

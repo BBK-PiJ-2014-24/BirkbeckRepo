@@ -5,7 +5,7 @@ public class DoubleLinkedList <E>{
 	// Fields
 	// ------
 	
-	private Node<E> head;
+	protected Node<E> head;
 	private int countNodes;
 	
 	

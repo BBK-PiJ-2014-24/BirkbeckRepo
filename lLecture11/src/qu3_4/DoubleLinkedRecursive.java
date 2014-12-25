@@ -1,19 +1,19 @@
 package qu3_4;
 
-public class DoubleLinkedCircularRecursive<E> {
+public class DoubleLinkedRecursive<E> {
 
 	// Fields
 	// ------
 	
 	private E data;
-	private DoubleLinkedCircularRecursive<E> nextNode;
-	private DoubleLinkedCircularRecursive<E> prevNode;
+	private DoubleLinkedRecursive<E> nextNode;
+	private DoubleLinkedRecursive<E> prevNode;
 	
 	
 	
 	// Constructor
 	// -----------
-	public DoubleLinkedCircularRecursive(E e){
+	public DoubleLinkedRecursive(E e){
 		data = e;
 		nextNode = null;
 		prevNode = null;
@@ -22,19 +22,19 @@ public class DoubleLinkedCircularRecursive<E> {
 	// getter/setter
 	// --------------
 	
-	public DoubleLinkedCircularRecursive<E> getNextNode(){
+	public DoubleLinkedRecursive<E> getNextNode(){
 		return nextNode;
 	}
 	
-	public void setNextNode(DoubleLinkedCircularRecursive<E> n){
+	public void setNextNode(DoubleLinkedRecursive<E> n){
 		nextNode = n;
 	}
 	
-	public DoubleLinkedCircularRecursive<E> getPrevNode(){
+	public DoubleLinkedRecursive<E> getPrevNode(){
 		return prevNode;
 	}
 	
-	public void setPrevNode(DoubleLinkedCircularRecursive<E> n){
+	public void setPrevNode(DoubleLinkedRecursive<E> n){
 		prevNode = n;
 	}
 	
@@ -55,7 +55,7 @@ public class DoubleLinkedCircularRecursive<E> {
 	public void add(E e){
 		
 		if(this.getNextNode()==null){
-			DoubleLinkedCircularRecursive<E> n = new DoubleLinkedCircularRecursive<E>(e);
+			DoubleLinkedRecursive<E> n = new DoubleLinkedRecursive<E>(e);
 			this.setNextNode(n);
 			n.setPrevNode(this);
 		}
@@ -74,8 +74,8 @@ public class DoubleLinkedCircularRecursive<E> {
 		else if(index>0)
 			this.getNextNode().delete(index-1);
 		else{
-			DoubleLinkedCircularRecursive<E> x = this.prevNode;
-			DoubleLinkedCircularRecursive<E> y = this.nextNode;
+			DoubleLinkedRecursive<E> x = this.prevNode;
+			DoubleLinkedRecursive<E> y = this.nextNode;
 			x.setNextNode(y);
 			y.setPrevNode(x);
 		}	
@@ -96,7 +96,7 @@ public class DoubleLinkedCircularRecursive<E> {
 	
 	public void printBack(){
 		int countNodes = count();
-		DoubleLinkedCircularRecursive<E> n = this;
+		DoubleLinkedRecursive<E> n = this;
 		for(int i=0;i<countNodes-1;i++)
 			n = n.getNextNode();
 		while(n.prevNode!=null){
