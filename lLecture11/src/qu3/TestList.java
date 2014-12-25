@@ -46,6 +46,8 @@ public class TestList {
 		 r.add("java");
 		 r.add("universe");
 		 r.delete(2);
+		 r.printFwd();
+		 r.printBack();
 		 
 	}
 

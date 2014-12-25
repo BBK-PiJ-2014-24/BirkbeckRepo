@@ -63,6 +63,8 @@ public class DoubleLinkedCircularRecursive<E> {
 			this.getNextNode().add(e);
 	} // end add
 
+	// delete()
+	// --------
 	
 	public void delete(int index){
 		int countNodes = count();
@@ -76,7 +78,32 @@ public class DoubleLinkedCircularRecursive<E> {
 			DoubleLinkedCircularRecursive<E> y = this.nextNode;
 			x.setNextNode(y);
 			y.setPrevNode(x);
+		}	
+	} // end delete
+	
+	// printFwd()
+	// ----------
+	
+	public void printFwd(){
+		if(this.getNextNode()!=null){
+			System.out.println(this.data);
+			this.getNextNode().printFwd();
 		}
-	}
+	} // end printFwd
+	
+	// printBack()
+	// -----------
+	
+	public void printBack(){
+		int countNodes = count();
+		DoubleLinkedCircularRecursive<E> n = this;
+		for(int i=0;i<countNodes-1;i++)
+			n = n.getNextNode();
+		while(n.prevNode!=null){
+			System.out.println(n.data);
+			n = n.prevNode;
+			}
+			
+	} // end printFwd
 	
 }  // end class
