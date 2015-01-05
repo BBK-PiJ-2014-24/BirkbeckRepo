@@ -16,15 +16,7 @@ public class BookTest {
 		assertEquals("getTitle Check", "The Power of Now", title);
 		assertEquals("getAuthor Check", "Tolle", author );
 		
-		b.setTitle("AntiFragile");
-		b.setAuthor("Taleb");
-		title = b.getTitle();
-		author = b.getAuthor();
-		
-		assertEquals("getTitle Check", "AntiFragile", title);
-		assertEquals("getAuthor Check", "Taleb", author );
-		
-		
+
 	}
 
 }

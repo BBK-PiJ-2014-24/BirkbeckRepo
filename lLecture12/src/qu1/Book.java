@@ -28,15 +28,7 @@ public class Book {
 		return title;
 	}
 	
-	/**
-	 * setTitle
-	 * @param t - Title
-	 */
-	public void setTitle(String t){
-		title = t;
-	}
-	
-	
+		
 	/**
 	 * getAuthor - Returns Author
 	 */
@@ -44,13 +36,7 @@ public class Book {
 		return author;
 	}
 	
-	/**
-	 * setAuthor
-	 * @param a - Author
-	 */
-	public void setAuthor(String a){
-		author = a;
-	}
+
 	
 	
 	
