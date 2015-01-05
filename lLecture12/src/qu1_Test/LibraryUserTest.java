@@ -4,8 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import qu1.Library;
-import qu1.LibraryUser;
+import qu1.LibraryImpl;
+import qu1.LibUser;
 import qu1.LibUserImpl;
 
 
@@ -16,7 +16,7 @@ public class LibraryUserTest {
 	// Basic Getter/Setter Test
 	@Test
 	public void test1() {
-		LibraryUser l = new LibUserImpl("Stew");
+		LibUser l = new LibUserImpl("Stew");
 		l.setUserID(123);
 		String name = l.getUserName();
 		int id = l.getUserID();
@@ -29,14 +29,14 @@ public class LibraryUserTest {
 		assertEquals("UserName 2nd Check","John", name);
 	}
 	
-	@Test
+	@Test  // Register Checks On UserName and Library Classes 
 	public void test2(){
 		
-		Library l = new Library("Croydon");
-		LibraryUser u = new LibUserImpl("Stew");
+		LibraryImpl l = new LibraryImpl("Croydon");
+		LibUser u = new LibUserImpl("Stew");
 		u.register(l);
-		assertEquals("Library Name Register Check", "Croydon",u.getLibrary().getLibraryName());
-		
+		assertEquals("UserName Class Register Check", "Croydon",u.getLibrary().getLibraryName());
+		// assertEquals("Library Class Register Check on UserDatabase", "Stew",)
 	}
 	
 	

@@ -1,14 +1,14 @@
 package qu1;
 
 
-public class LibUserImpl implements LibraryUser {
+public class LibUserImpl implements LibUser {
 
 	// Fields
 	// ------
 	
 	private String UserName;
 	private int id;
-	private Library lib;
+	private LibraryImpl lib;
 	
 	// Constructor
 	// -----------
@@ -41,12 +41,13 @@ public class LibUserImpl implements LibraryUser {
 	}
 
 	@Override
-	public void register(Library l) {
-		lib = l;	
+	public void register(LibraryImpl l) {
+		lib = l;
+		l.getUserDatabase().put(this);
 	}
 
 	@Override
-	public Library getLibrary() {
+	public LibraryImpl getLibrary() {
 		// TODO Auto-generated method stub
 		return lib;
 	}

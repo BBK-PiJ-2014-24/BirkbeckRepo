@@ -8,7 +8,7 @@ The class must implement methods to get the name of the person and their ID, and
 
 package qu1;
 
-public interface LibraryUser {
+public interface LibUser {
 
 /**
  * setUserName 
@@ -36,21 +36,21 @@ public interface LibraryUser {
   */
  int getUserID();
  
- /*
+ 
 /**
  * register - Method for User to Register with a Library
  * @param l  - Name of Library
  */
- /*
- void register(Library l);
+ 
+ void register(LibraryImpl l);
  
  /**
   * getLibrary - returns Library user is registered at.
   * @return
   */
- /*
- Library getLibrary();
- */
+ 
+ LibraryImpl getLibrary();
+
  
  
  

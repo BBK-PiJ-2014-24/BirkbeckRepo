@@ -7,13 +7,13 @@ public class LibUserDatabase {
 	// Fields
 	// ------
 
-	private HashMap<Integer,LibraryUser> m;
+	private HashMap<Integer,LibUser> m;
 	
 	// Constructors
 	// ------------
 	
 	public LibUserDatabase(){
-		m = new HashMap<Integer,LibraryUser>();
+		m = new HashMap<Integer,LibUser>();
 	}
 
 	
@@ -32,16 +32,25 @@ public class LibUserDatabase {
 	
 	
 	/**
-	 * put - Generates unique ID for new user and then adds (ID, user)  to the database
+	 * put - Generates unique ID for new user and then adds (ID, user)  to the Library User's database
 	 * @param name - name of user
 	 */
-	public void put(LibraryUser u){
+	public void put(LibUser u){
 		Integer id = u.getUserID();     // Should be id = 0;
 		while(m.containsKey(id)==true || id == 0){
 			id = LibUserDatabase.generateID();   // generate random id
 			u.setUserID(id);             // assign id to user
 		}		
 		m.put(id, u);
+	}
+	
+	/**
+	 * getLibUser(Integer key) - Returns the LibUser obj given ID key
+	 * @param key - this is the id of the lib user
+	 * @return Returns the LibUser obj given ID key
+	 */
+	public LibUser getLibUser(Integer key){
+		return m.get(key);
 	}
 	
 	/**

@@ -7,7 +7,7 @@ import org.junit.Test;
 
 import qu1.LibUserDatabase;
 import qu1.LibUserImpl;
-import qu1.LibraryUser;
+import qu1.LibUser;
 
 public class LibDatabaseTest1 {
 
@@ -34,8 +34,8 @@ public class LibDatabaseTest1 {
 	@Test(timeout = 1000)// Testing Database Entry
 	public void test2(){
 		LibUserDatabase l = new LibUserDatabase();
-		LibraryUser u1 = new LibUserImpl("Stewart");
-		LibraryUser u2 = new LibUserImpl("John");
+		LibUser u1 = new LibUserImpl("Stewart");
+		LibUser u2 = new LibUserImpl("John");
 		
 		assertEquals("Dummy LibraryUser Working", "Stewart",u1.getUserName());
 		assertEquals("Dummy LibraryUser ID Working", 0, u1.getUserID());
