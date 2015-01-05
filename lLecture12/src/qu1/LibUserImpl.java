@@ -40,5 +40,16 @@ public class LibUserImpl implements LibraryUser {
 		return id;
 	}
 
+	@Override
+	public void register(Library l) {
+		lib = l;	
+	}
+
+	@Override
+	public Library getLibrary() {
+		// TODO Auto-generated method stub
+		return lib;
+	}
+
 
 }
