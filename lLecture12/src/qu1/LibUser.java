@@ -23,6 +23,8 @@ public interface LibUser {
   */
  String getUserName();
  
+ 
+ 
  /**
   * setUserID - sets user ID
   * @param ID
@@ -37,19 +39,20 @@ public interface LibUser {
  int getUserID();
  
  
+ 
 /**
  * register - Method for User to Register with a Library
  * @param l  - Name of Library
  */
+ void register(Library l);
  
- void register(LibraryImpl l);
+ 
  
  /**
   * getLibrary - returns Library user is registered at.
   * @return
   */
- 
- LibraryImpl getLibrary();
+ Library getLibrary();
 
  
  

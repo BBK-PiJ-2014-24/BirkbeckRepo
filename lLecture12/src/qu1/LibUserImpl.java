@@ -8,7 +8,7 @@ public class LibUserImpl implements LibUser {
 	
 	private String UserName;
 	private int id;
-	private LibraryImpl lib;
+	private Library lib;
 	
 	// Constructor
 	// -----------
@@ -41,13 +41,13 @@ public class LibUserImpl implements LibUser {
 	}
 
 	@Override
-	public void register(LibraryImpl l) {
+	public void register(Library l) {
 		lib = l;
 		l.getUserDatabase().put(this);
 	}
 
 	@Override
-	public LibraryImpl getLibrary() {
+	public Library getLibrary() {
 		// TODO Auto-generated method stub
 		return lib;
 	}

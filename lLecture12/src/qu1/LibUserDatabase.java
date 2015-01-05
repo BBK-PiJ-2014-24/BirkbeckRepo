@@ -1,6 +1,7 @@
 package qu1;
 
 import java.util.HashMap;
+import java.util.Iterator;
 
 public class LibUserDatabase {
 	
@@ -69,6 +70,26 @@ public class LibUserDatabase {
 	public boolean containsKey(Integer key){
 		return m.containsKey(key);
 	}
+	
+	public int getID(String name){
+		//Iterator itr = m.keySet().iterator();
+		//while(itr.hasNext()){
+		//	itr.next();
+		//	
+		boolean foundName = false;
+		for(LibUser l : m.values()){       // Iteration Over Values (i.e. the LibUser Obj )
+			String searchName = l.getUserName();
+			if(searchName.equals(name)){   // if Find Name
+				foundName = true;			// raise flag
+				return l.getUserID();      // return UserID
+			} // end if
+		} // end loop
+		if(foundName){
+			LibUser newUser = new LibUserImpl(name);
+			return newUser.getUserID();
+		}
+		return 0;
+	} // end getID
 	
 
 }
