@@ -15,7 +15,6 @@ public class BookTest {
 		String author = b.getAuthor();
 		assertEquals("getTitle Check", "The Power of Now", title);
 		assertEquals("getAuthor Check", "Tolle", author );
-		
 
 	}
 

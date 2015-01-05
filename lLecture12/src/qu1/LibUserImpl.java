@@ -8,6 +8,7 @@ public class LibUserImpl implements LibraryUser {
 	
 	private String UserName;
 	private int id;
+	private Library lib;
 	
 	// Constructor
 	// -----------
@@ -38,5 +39,6 @@ public class LibUserImpl implements LibraryUser {
 	public int getUserID() {
 		return id;
 	}
+
 
 }
