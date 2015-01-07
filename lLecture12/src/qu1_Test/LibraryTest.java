@@ -49,6 +49,13 @@ public class LibraryTest {
 		assertEquals("Library getID() on Unregistered User", id4, findID4 );
 	}
 	
-	
+	// Test Library addBook()
+	@Test
+	public void test4(){
+		LibraryImpl l = new LibraryImpl("Croydon");
+		l.addBook("The Power of Now", "Tolle");
+		l.addBook("AntiFragile", "Taleb");
+		assertEquals("Test addBook()", 2, l.getBookDatabase().size());
+	}
 
 }
