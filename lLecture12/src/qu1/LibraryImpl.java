@@ -63,6 +63,22 @@ public class LibraryImpl implements Library {
 		if(b != null)
 			b.setBorrowed(false);
 	}
+
+	@Override
+	public int getReaderCount() {
+		return userDatabase.size();
+	}
+
+	@Override
+	public int getBookCount() {
+		return bookDatabase.size();
+	}
+
+	@Override
+	public int getBorrowedBookCount() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 	
 	
 	
