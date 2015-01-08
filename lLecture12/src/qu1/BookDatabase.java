@@ -1,5 +1,6 @@
 package qu1;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.TreeSet;
@@ -15,7 +16,7 @@ public class BookDatabase {
 	// Constructor
 	// -----------
 	public BookDatabase(){
-		database = new LinkedList<Book>();
+		database = new ArrayList<Book>();
 	}
 	
 	// addBook()
@@ -28,8 +29,19 @@ public class BookDatabase {
 	// size()
 	// ------
 	public int size(){
-		return database.size();
+		return database.size();	
 	}
 	
+	// findBook()
+	// ----------
+	
+	public Book findBook(String t){
+		for(Book i : database ){
+			if(i.getTitle().equals(t)){
+				return i;
+			}
+		}
+		return null;
+	}
 
 }

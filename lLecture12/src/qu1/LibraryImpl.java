@@ -49,6 +49,18 @@ public class LibraryImpl implements Library {
 	public void addBook(String t, String a) {
 		bookDatabase.addBook(t, a);
 	}
+
+	@Override
+	public Book takeBook(String t) {
+		Book b = bookDatabase.findBook(t);
+		return b;
+	/*	if(!b.equals(null)){
+			b.isBorrowed();	
+			return b;
+		}
+		Book n = null;
+		return n;*/
+	}
 	
 	
 	

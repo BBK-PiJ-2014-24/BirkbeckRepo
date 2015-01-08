@@ -17,8 +17,20 @@ import qu1.Book;
 public class Test {
 
 	public static void main(String[] args){
-		/*
+		
 		Library l = new LibraryImpl("Croydon");
+		l.addBook("The Power of Now", "Tolle");
+		
+	//  BookDatabase bd = new BookDatabase();
+	//	bd.addBook("The Power of Now", "Tolle");
+		l.addBook("Antifragile", "Taleb");
+		Book b1 = l.takeBook("The Power of Now");
+		System.out.println(b1.getTitle());
+		
+		Book b2 = l.takeBook("Gone With the Wind");
+		
+		
+		/*
 		LibUser u1 = new LibUserImpl("Stewart");
 		LibUser u2 = new LibUserImpl("John");
 		LibUser u3 = new LibUserImpl("Newnham");
@@ -33,14 +45,14 @@ public class Test {
 		*/
 		
 		
-		
+		/*
 		List<Book> database = new LinkedList<Book>();
 		Book b = new Book("The Power of Now", "Tolle");
 		database.add(b);
 		
 		//BookDatabase bd = new BookDatabase();
 		//bd.addBook("The Power of Now", "Tolle");
-		
+		*/
 		
 		
 	}

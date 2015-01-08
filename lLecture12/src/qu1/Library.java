@@ -35,4 +35,28 @@ public interface Library {
  * @return - returns the userDatabase for the Library.
  */
 	public LibUserDatabase getUserDatabase();
+
+
+	/**
+	 * getBookDatabase - gets bookDatabase obj 
+	 * @return bookDatabase obj
+	 */
+	public BookDatabase getBookDatabase();
+	
+	
+/**
+ * addBook - adds Book to the Library's Book database.
+ * @param t - Book Title
+ * @param a - Author
+ */
+public void addBook(String t, String a);
+
+
+/**
+ * takeBook(String title) If the book is not taken, marks the book as taken and returns it. 
+ * If the book is taken, null is returned.
+ * @param  t - Title of Book
+ */
+public Book takeBook(String t);
+
 }

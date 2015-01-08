@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import qu1.Book;
 import qu1.LibUserImpl;
 import qu1.LibraryImpl;
 import qu1.LibUser;
@@ -56,6 +57,19 @@ public class LibraryTest {
 		l.addBook("The Power of Now", "Tolle");
 		l.addBook("AntiFragile", "Taleb");
 		assertEquals("Test addBook()", 2, l.getBookDatabase().size());
+	}
+	
+	// Test takeBook()
+	@Test
+	public void test5(){
+		LibraryImpl l = new LibraryImpl("Croydon");
+		l.addBook("The Power of Now", "Tolle");
+		l.addBook("AntiFragile", "Taleb");
+		Book b1 = l.takeBook("The Power of Now");
+		Book b2 = l.takeBook("Gone With the Wind");
+		assertEquals("Test takeBook() - Return Book","The Power of Now", b1.getTitle());
+		assertTrue("Test Book isBorrowed()",b1.isBorrowed());
+		assertNull("Test takeBook() - Return Null",b2);
 	}
 
 }
