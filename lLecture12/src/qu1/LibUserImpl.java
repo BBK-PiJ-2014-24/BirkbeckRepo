@@ -1,5 +1,8 @@
 package qu1;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class LibUserImpl implements LibUser {
 
@@ -9,12 +12,16 @@ public class LibUserImpl implements LibUser {
 	private String UserName;
 	private int id;
 	private Library lib;
+	private List<String> borrowedBookList;
+	private int userBookCount;
 	
 	// Constructor
 	// -----------
 	public LibUserImpl(String UserName){
 		this.UserName = UserName;
 		id = 0;
+		borrowedBookList = new ArrayList<String>();
+		userBookCount = 0;
 	}
 	
 	// getter/Setters
@@ -48,8 +55,35 @@ public class LibUserImpl implements LibUser {
 
 	@Override
 	public Library getLibrary() {
-		// TODO Auto-generated method stub
 		return lib;
+	}
+
+	@Override
+	public List<String> getBorrowedBookList() {
+		return borrowedBookList;
+	}
+
+	@Override
+	public void borrowBook(String t) {
+		int maxBooks = lib.getMaxBookPerUser();
+		
+		
+		if(userBookCount<maxBooks){
+			Book b = lib.takeBook(t);
+			if(b != null){     // If Book IS in Library and if Book is NOT Loaned
+					borrowedBookList.add(t);
+					userBookCount++;		
+			}
+		}
+		else{
+			System.out.println("Denied: User Has Exceeded Max Number of Books on Loan");
+		}
+			
+	}
+
+	@Override
+	public int getUserBookCount() {
+		return userBookCount;
 	}
 
 

@@ -8,6 +8,8 @@ The class must implement methods to get the name of the person and their ID, and
 
 package qu1;
 
+import java.util.List;
+
 public interface LibUser {
 
 /**
@@ -54,10 +56,25 @@ public interface LibUser {
   */
  Library getLibrary();
 
+ /**
+  * getBorrowedBookList()
+  * list (or an array) with the titles of all the books they are borrowing at the moment.
+  * @return list (or an array) with the titles of all the books borrowed
+  */
+ List<String> getBorrowedBookList();
  
  
+ /**
+  * borrowBook()
+  * - Method for user to borrow a book
+  * @param - Title of Book to Borrow;
+  */
+ void borrowBook(String t);
  
- 
- 
+ /**
+  * getUserBookCount - Counts Number of Books User has on Loan
+  * @return - Number of Books User has on Loan
+  */
+ int getUserBookCount();
  
 }

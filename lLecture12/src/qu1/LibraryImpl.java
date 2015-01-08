@@ -6,6 +6,7 @@ public class LibraryImpl implements Library {
 	private int MaxBookPerUser;
 	private LibUserDatabase userDatabase;
 	private BookDatabase bookDatabase;
+	private int countBorrowedBooks;
 	
 	// Constructor
 	// -----------
@@ -14,6 +15,7 @@ public class LibraryImpl implements Library {
 		userDatabase = new LibUserDatabase();
 		bookDatabase = new BookDatabase();
 		MaxBookPerUser = 1;
+		countBorrowedBooks = 0;
 	}
 	
 	// getter/setter
@@ -53,15 +55,28 @@ public class LibraryImpl implements Library {
 	@Override
 	public Book takeBook(String t) {
 		Book b = bookDatabase.findBook(t);
-		if(b!=null)   // If you want to test obj is null, DO NOT USE .equals, use == instead
-			b.setBorrowed(true);	
+		if(b!=null) {  // If you want to test obj is null, DO NOT USE .equals, use == instead
+			if(b.isBorrowed() == false){  // if Book Not on Loan
+				b.setBorrowed(true);	
+				countBorrowedBooks++;
+			}
+			else{  // if book is on loan
+				b = null;
+				System.out.println("Sorry, the book, " + t + ", is Already on Loan");
+			}		
+		}
+		else{
+			System.out.println("Sorry, the book, " + t + ", is Not Found in this Library");
+		}
 		return b;
 	}
 
 	@Override
 	public void returnBook(Book b) {
-		if(b != null)
+		if(b != null){
 			b.setBorrowed(false);
+			countBorrowedBooks--;
+		}
 	}
 
 	@Override
@@ -76,8 +91,7 @@ public class LibraryImpl implements Library {
 
 	@Override
 	public int getBorrowedBookCount() {
-		// TODO Auto-generated method stub
-		return 0;
+		return countBorrowedBooks;
 	}
 	
 	
