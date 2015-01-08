@@ -86,5 +86,21 @@ public class LibUserImpl implements LibUser {
 		return userBookCount;
 	}
 
+	@Override
+	public void returnBook(String t) {
+		Book b = lib.getBookDatabase().findBook(t);
+		if(b == null){
+			System.out.println("Invalid Request: Book is Not Found in Library");
+		}
+		else if(!borrowedBookList.contains(t)){
+			System.out.println("Invalid Request: User Did Not Have Book on Loan");
+		}
+		else{
+			lib.returnBook(b);
+			borrowedBookList.remove(t);
+			userBookCount--;
+		}	
+	}
+
 
 }
