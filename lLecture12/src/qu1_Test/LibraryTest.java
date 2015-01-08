@@ -72,4 +72,21 @@ public class LibraryTest {
 		assertNull("Test takeBook() - Return Null",b2);
 	}
 
+	// Test returnBook()
+	@Test
+	public void test6(){
+		LibraryImpl l = new LibraryImpl("Croydon");
+		l.addBook("The Power of Now", "Tolle");
+		Book b1 = l.takeBook("The Power of Now");
+		assertTrue("Test Book is Borrowed",b1.isBorrowed());
+		l.returnBook(b1);
+		assertEquals("Test returnBook is returned",false, b1.isBorrowed());
+		l.returnBook(b1);
+		assertEquals("Test returnBook is ALREADY returned Book ",false, b1.isBorrowed());	
+	}
+	
+	
+	
+	
+	
 }

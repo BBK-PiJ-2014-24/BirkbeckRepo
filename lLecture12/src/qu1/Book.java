@@ -1,9 +1,7 @@
 package qu1;
 
 public class Book {
-	
-	
-	
+
 	// Fields
 	// ------
 	private String title;
@@ -16,7 +14,6 @@ public class Book {
 	 * @param t = title of Book
 	 * @param a = author of Book
 	 */
-	
 	public Book(String t, String a){
 		title = t;
 		author = a;
@@ -41,10 +38,11 @@ public class Book {
 
 	/**
 	 * isBorrowed() Determines if the book is Taken Out. 
-	 * @return returns true if book is on Loan (borrowed); returns false if book is not taken out.
+	 * @return returns true if book is on Loan (borrowed); 
+	 * returns false if book is not taken out.
 	 */
 	public boolean isBorrowed(){
-		if(borrowed=false)
+		if(borrowed==false)
 			return false;
 		else
 			return true;

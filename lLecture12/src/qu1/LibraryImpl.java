@@ -53,13 +53,15 @@ public class LibraryImpl implements Library {
 	@Override
 	public Book takeBook(String t) {
 		Book b = bookDatabase.findBook(t);
+		if(b!=null)   // If you want to test obj is null, DO NOT USE .equals, use == instead
+			b.setBorrowed(true);	
 		return b;
-	/*	if(!b.equals(null)){
-			b.isBorrowed();	
-			return b;
-		}
-		Book n = null;
-		return n;*/
+	}
+
+	@Override
+	public void returnBook(Book b) {
+		if(b != null)
+			b.setBorrowed(false);
 	}
 	
 	
