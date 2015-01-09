@@ -18,8 +18,7 @@ public class LibraryTest {
 		l.setMaxBookPerUser(3);
 		assertEquals("Max Book Test", 3, l.getMaxBookPerUser());
 	}
-	
-	
+		
 	// Test for Library Class Registration Works With User Class and UserDatabase Class
 	@Test
 	public void test2(){
@@ -28,8 +27,7 @@ public class LibraryTest {
 		u.register(l);
 		int id = u.getUserID();                                 
 		assertEquals("Library UserDatabase Registry LibUser Check",true,l.getUserDatabase().containsKey(id));
-		assertEquals("Libary UserDatabase Registry LibUser NameCheck", "Stewart",l.getUserDatabase().getLibUser(id).getUserName());
-		
+		assertEquals("Libary UserDatabase Registry LibUser NameCheck", "Stewart",l.getUserDatabase().getLibUser(id).getUserName());		
 	}
 	
 	// Test for Library Class getID()
@@ -85,8 +83,50 @@ public class LibraryTest {
 		assertEquals("Test returnBook is ALREADY returned Book ",false, b1.isBorrowed());	
 	}
 	
+	// Test getLibraryCount()
+	@Test
+	public void test7(){
+		LibraryImpl l = new LibraryImpl("Croydon");
+		assertEquals("Test Library Count Before Populated", 0, l.getReaderCount());
+		LibUser a = new LibUserImpl("Stewart");
+		LibUser b = new LibUserImpl("John");
+		LibUser c = new LibUserImpl("Newnham");
+		a.register(l);
+		b.register(l);
+		c.register(l);
 	
+		assertEquals("Test Library Count After Populated", 3, l.getReaderCount());		
+	}
 	
+	// Test getBookCount()
+	@Test
+	public void test8(){
+		LibraryImpl l = new LibraryImpl("Croydon");
+		assertEquals("Test getBookCount before populated",0,l.getBookCount());
+		l.addBook("The Power of Now", "Tolle");
+		l.addBook("AntiFragile", "Taleb");
+		assertEquals("Test getBookCount after populated",2,l.getBookCount());
+	}
+	
+	// Test getBorrowedBookCount()
+	@Test
+	public void test9(){
+		LibraryImpl l = new LibraryImpl("Croydon");
+		assertEquals("Test getBorrowedBookCount before populated:",0,l.getBookCount());
+		l.addBook("The Power of Now", "Tolle");
+		l.addBook("AntiFragile", "Taleb");
+		assertEquals("Test getBookCount after populated",2,l.getBookCount());
+		assertEquals("Test getBorrowedBookCount after populated, but none Borrowed:",0,l.getBorrowedBookCount());
+		
+		Book b1 = l.takeBook("The Power of Now");
+		assertEquals("Test getBookCount after populated",2,l.getBookCount());
+		assertEquals("Test getBorrowedBookCount after one Borrowed:",1,l.getBorrowedBookCount());
+		
+		l.takeBook("Gone With the Wind");
+		assertEquals("Test getBorrowedBookCount after Try to Borrow Book Not in Library:",1,l.getBorrowedBookCount());
+		l.returnBook(b1);
+		assertEquals("Test getBorrowedBookCount after return Borrowed Book:",0,l.getBorrowedBookCount());
+	}
 	
 	
 }

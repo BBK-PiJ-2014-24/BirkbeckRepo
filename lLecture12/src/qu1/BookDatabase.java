@@ -41,7 +41,7 @@ public class BookDatabase {
 				return i;
 			}
 		}
-		return null;
+		return null;  // returns Null if Can't find Book
 	}
 
 }

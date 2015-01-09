@@ -19,15 +19,42 @@ public class Test {
 	public static void main(String[] args){
 		
 		Library l = new LibraryImpl("Croydon");
+		LibUser u = new LibUserImpl("Stew");
+		u.register(l);
+		l.setMaxBookPerUser(3);
+	
 		l.addBook("The Power of Now", "Tolle");
+		l.addBook("Antifragile", "Taleb");
+		l.addBook("GoldFinger", "Ian Fleming");
+		l.addBook("MoonRaker", "Ian Fleming");	
+		
+		u.borrowBook("The Power of Now");  // user borrows two books
+		u.borrowBook("Antifragile");
+		u.returnBook("The Power of Now");
+		u.returnBook("MoonRaker");
+		u.returnBook("Gone With the Wind");
+		
+		
+		
+		
+		
+	/*	
+		Book bz = l.takeBook("The Power of Now");
+		x = l.getBorrowedBookCount();
+		
 		
 	//  BookDatabase bd = new BookDatabase();
 	//	bd.addBook("The Power of Now", "Tolle");
-		l.addBook("Antifragile", "Taleb");
+		
 		Book b1 = l.takeBook("The Power of Now");
 		System.out.println(b1.getTitle());
 		
-		Book b2 = l.takeBook("Gone With the Wind");
+		//Book b2 = l.takeBook("Gone With the Wind");
+		l.returnBook(b1);
+		b1.isBorrowed();
+		l.returnBook(b1);
+		b1.isBorrowed();
+		System.out.println(b1.isBorrowed());
 		
 		
 		/*

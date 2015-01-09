@@ -77,4 +77,9 @@ public interface LibUser {
   */
  int getUserBookCount();
  
+ /**
+  * returns Book on Loan to Library.
+  */
+ void returnBook(String t);
+ 
 }

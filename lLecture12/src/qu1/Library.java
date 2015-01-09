@@ -44,19 +44,44 @@ public interface Library {
 	public BookDatabase getBookDatabase();
 	
 	
-/**
- * addBook - adds Book to the Library's Book database.
- * @param t - Book Title
- * @param a - Author
- */
-public void addBook(String t, String a);
-
-
-/**
- * takeBook(String title) If the book is not taken, marks the book as taken and returns it. 
- * If the book is taken, null is returned.
- * @param  t - Title of Book
- */
-public Book takeBook(String t);
+	/**
+	 * addBook - adds Book to the Library's Book database.
+	 * @param t - Book Title
+	 * @param a - Author
+	 */
+	public void addBook(String t, String a);
+	
+	/**
+	 * takeBook(String title) If the book is not taken, marks the book as taken and returns it. 
+	 * If the book is taken, null is returned.
+	 * @param  t - Title of Book
+	 */
+	public Book takeBook(String t);
+	
+	/**
+	 * returnBook(Book book) Marks the book as not taken.
+	 * @param - Book obj to be returned.
+	 */
+	public void returnBook(Book b);
+	
+	/**
+	 * getReaderCount() returns the number of users registered in this library.
+	 * @return - returns the number of users registered in this library.
+	 */
+	public int getReaderCount();
+	
+	/**
+	 * getBookCount() returns the number of books in this library.
+	 * @return - returns the number of books in this library
+	 */
+	public int getBookCount();
+	
+	/**
+	 * getBookBorrowedCount() returns the number of borrowed books in this library.
+	 * @return - returns the number of borrowed books in this library
+	 */
+	public int getBorrowedBookCount();
 
 }
+
+
