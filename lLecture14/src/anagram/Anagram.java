@@ -1,5 +1,10 @@
 package anagram;
 
+
+// notes to self: THIS TOOK WAY TOOK TOO LONG. THE ALGO WAS RIGHT, so the remedy is to write out the 
+// output, starting simple case and building up the sequence after that. Write OUT THE SEQUENCES 
+// CORRECTLY!!!!
+
 import java.util.ArrayList;
 import java.util.List;
 
