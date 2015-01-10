@@ -20,14 +20,11 @@ public class Anagram {
 	public List<String> calcAnagram(String word, String chopLetters){
  
 		if(word.length()>2){
-			//chopLetters = chopLetters + word.charAt(0);
-			//word = word.substring(1);
+			String tempChop = chopLetters + word.charAt(0);
 			for(char i : word.toCharArray()){
-				char char0 = word.charAt(0);
-				word = word.substring(1) + char0;
-				chopLetters = chopLetters + word.charAt(0);
-				calcAnagram(word.substring(1), chopLetters);
-				chopLetters = chopLetters.substring(1);
+				String tempChop1 = chopLetters + word.charAt(0);
+				calcAnagram(word.substring(1), tempChop1);
+				word = word.substring(1) + word.charAt(0);
 			}	
 		}
 		
