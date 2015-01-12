@@ -24,11 +24,11 @@ public class BinarySearchCalcTest {
 		int startArray = 0;
 		int endArray = 99;
 		
-		boolean isX = BinarySearchCalc(x, list);
-		boolean isY = BinarySearchCalc(y, list);
-		boolean isM = BinarySearchCalc(m, list);
-		boolean isStartArray = BinarySearchCalc(startArray, list);
-		boolean isEndArray = BinarySearchCalc(endArray, list);
+		boolean isX = BinarySearch.find(x, list);
+		boolean isY = BinarySearch.find(y, list);
+		boolean isM = BinarySearch.find(m, list);
+		boolean isStartArray = BinarySearch.find(startArray, list);
+		boolean isEndArray = BinarySearch.find(endArray, list);
 		
 		assertEquals("Test Bin Search when number x is in Array", true, isX);
 		assertEquals("Test Bin Search when number y is NOT in Array", false, isY);
