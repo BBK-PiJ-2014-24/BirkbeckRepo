@@ -23,7 +23,7 @@ public class MergeSort {
 	
 	public int[][] sort(int[][] a){
 	
-		int[][] b = new int[a.length/2][(a[1].length)*2];
+		int[][] b = new int[a.length/2][(a[1].length)*2]; // N.b. Multi-Dim Arr Needs to be Fully init for Loops
 		for(int i=0; i< a.length; i=i+2){
 			int j = 0; 
 			int k = 0;
