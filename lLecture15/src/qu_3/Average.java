@@ -15,8 +15,25 @@ public class Average {
 		
 		Scanner importConsole = new Scanner(System.in);
 		boolean flag = false;
+		boolean nFlag = false;
 		int total = 0;
-		int n = 3;
+		int n = 0;
+		
+		do{
+			try{
+				System.out.print("How Many Numbers Do You Want to Average?");
+				n = importConsole.nextInt();
+				nFlag= true;
+			}
+			catch (Exception ex){
+				System.out.println("Incorrect Input! Try again");
+				importConsole.next();
+			}
+		} while(!nFlag);
+
+			
+		
+		
 		
 		for(int i=0;i<n;i++){
 			flag = false;
