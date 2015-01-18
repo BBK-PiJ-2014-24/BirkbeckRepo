@@ -1,5 +1,4 @@
 package qu_6;
-
 /*
  * THIS TEST1 CATCHES BOTH EXCEPTIONS WITH NO TRY/CATCH BLOCKS AND WITHIN LAUNCH()
  * Result: Can't even run checkedException method (Coz they are unhandled). And RunTime Exception 
@@ -36,12 +35,9 @@ public class CoffeeMakerTester2 {
 		
 		// Using Runtime  Exception Method with try/catch
 		// ----------------------------------------------
-		
 	
 			System.out.println("\nAdding sugar Wiht NO try/catch BLOCK");
 			c.addSugar(sugarLumps, sweetTooth);
-		
-
 		
 		
 		System.out.println("\nI'm leaving the cafe");
