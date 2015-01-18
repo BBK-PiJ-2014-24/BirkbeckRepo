@@ -1,5 +1,9 @@
 package qu_6;
 
+/*
+ * THIS TEST1 CATCHES BOTH EXCEPTIONS WITHIN TRY/CATCH BLOCKS AND WITHIN LAUNCH()
+ */
+
 public class CoffeeMakerTester1 {
 	
 	
