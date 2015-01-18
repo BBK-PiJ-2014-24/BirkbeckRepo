@@ -29,8 +29,7 @@ public class CoffeeMakerTester1 {
 		}							// method has a choice of catch/try or "propgating throw up 
 		catch (TempException ex){   // the stack (i.e. to main)
 			System.out.println("Aiya! in temp try/catch");
-			// ex.getMessage();
-			 ex.printStackTrace();
+			 ex.printStackTrace(); // Prints the Excepion message and its place in the Stack
 		}
 		
 		System.out.println("\nWe reach the end of making coffee - Part I");
@@ -45,9 +44,9 @@ public class CoffeeMakerTester1 {
 		catch(SugarException e){
 			System.out.println("eh! in sugar try/catch");
 			 e.printStackTrace();
-			 String s = e.getMessage();
-			 System.out.println();
-			 System.out.println("getMessage:" + s);
+			 String s = e.getMessage();   // Just gets the Error Exception Message;
+			 System.out.println(); 
+			 System.out.println("getMessage:" + s); 
 		}
 		
 		
