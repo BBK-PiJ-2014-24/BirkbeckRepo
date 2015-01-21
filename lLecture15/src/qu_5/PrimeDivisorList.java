@@ -25,4 +25,10 @@ public interface PrimeDivisorList {
 	 String toString();
 
 	 
+	 /**
+	  * size() returns size for the PrimeDivisorList 
+	  * @return the number of Integers in the PrimeDivisorList.
+	  */
+	 int size();
+	 
 }
