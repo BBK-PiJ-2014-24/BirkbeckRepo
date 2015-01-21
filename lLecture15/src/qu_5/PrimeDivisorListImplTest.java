@@ -24,14 +24,9 @@ public class PrimeDivisorListImplTest {
 		assertEquals("Count the Number of Primes in the list: ", 4,list.size());
 		list.remove(x4);
 		assertEquals("Test the Remove() method: ", 3,list.size());
-		
-		
-		
-		
-		
-		
-		
-		
+		list.remove(x5);
+		assertEquals("Test the Remove() method: ", 3,list.size());
+	
 	}
 
 }
