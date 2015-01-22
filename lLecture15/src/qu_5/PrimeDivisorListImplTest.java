@@ -106,7 +106,11 @@ public class PrimeDivisorListImplTest {
 			
 			@Test
 			public void test6(){
-				assertEquals("Test toString(): ", "[ 2 * 3^2 * 7 = 126 ]", list.toString() );
+				list.add(x1);
+				list.add(x2);
+				list.add(x3);
+				list.add(x4);
+				assertEquals("Test toString(): ", "[ 2 * 3^2 * 7 * = 126 ]", list.toString() );
 			}
 
 }
