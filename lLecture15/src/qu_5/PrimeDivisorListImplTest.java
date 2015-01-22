@@ -18,6 +18,7 @@ public class PrimeDivisorListImplTest {
 	private Integer x4;
 	private Integer x5;
 	private Integer x6;
+	private Integer x7;
 	
 	PrimeDivisorList list;
 	
@@ -35,6 +36,7 @@ public class PrimeDivisorListImplTest {
 		x4 = 13;
 		x5 = 10;
 	    x6 = -3;
+	    x7 = null;
 	}
 	
 	@Rule
@@ -60,9 +62,7 @@ public class PrimeDivisorListImplTest {
 			exception.expectMessage("Number Must be Greater than 0.");
 			list.testPrimeNumber(x6);
 		}
-		
-		
-		
+			
 		
 		// Test AddList() / RemoveList()
 		// -----------------------------
@@ -77,6 +77,17 @@ public class PrimeDivisorListImplTest {
 			assertEquals("Test the Remove() method: ", 3,list.size());
 			list.remove(x5);
 			assertEquals("Test the Remove() method: ", 3,list.size());
-	}
+		}
+		
+		// Test addList() Exceptions
+		// --------------------------
+			
+			@Test
+			public void test4(){
+				exception.expect(NullPointerException.class);
+				list.add(x7);
+			}		
+		
+		
 
 }
