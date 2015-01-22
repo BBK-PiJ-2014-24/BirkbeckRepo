@@ -30,10 +30,10 @@ public class PrimeDivisorListImplTest {
 		
 		list = new PrimeDivisorListImpl();
 		
-		x1 = 1;
-		x2 = 2;
-		x3 = 5; 
-		x4 = 13;
+		x1 = 2;
+		x2 = 3;
+		x3 = 3; 
+		x4 = 7;
 		x5 = 10;
 	    x6 = -3;
 	    x7 = null;
@@ -88,6 +88,25 @@ public class PrimeDivisorListImplTest {
 				list.add(x7);
 			}		
 		
-		
+		// multiplyPrimes()
+		// ----------------
+			
+			@Test
+			public void test5(){
+				System.out.println("Test multiplyPrimes");
+				list.add(x1);
+				list.add(x2);
+				list.add(x3);
+				list.add(x4);
+				assertEquals("Test multiplyPrimes: ", 126,list.multiplyPrimes());
+			}
+			
+		// Test toString()
+		// ---------------
+			
+			@Test
+			public void test6(){
+				assertEquals("Test toString(): ", "[ 2 * 3^2 * 7 = 126 ]", list.toString() );
+			}
 
 }
