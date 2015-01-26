@@ -13,7 +13,6 @@ public class LostUpdateProblem implements Runnable{
 	public void run() {  
 		for(int i=0; i<50; i++){
 			increment();
-			System.out.println("balance is = " + balance);
 		}
 	}
 	
@@ -25,6 +24,7 @@ public class LostUpdateProblem implements Runnable{
 	public synchronized void increment(){
 		int i = balance;
 		balance = 1 + i;
+		System.out.println("balance is = " + balance);
 	}
 
 }
