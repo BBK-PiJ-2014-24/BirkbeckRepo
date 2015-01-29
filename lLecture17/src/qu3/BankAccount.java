@@ -2,20 +2,16 @@ package qu3;
 
 public class BankAccount { 
 	
-	private int balance = 0; 
-	
+	private volatile int balance = 0;   // !!!!! BreakThrough: MUST Make Field Variable "volatile"
+										// !!!!! It Guarantees The CORRECT Variable Visibility.
+										// At the same time, The Methods MUST BE SYNCHRONIZED!!
 	
 	public int getBalance() {
-		synchronized(this){
-			//try {
-				//System.out.println(Thread.currentThread().getName() + " Checking Balance....");
-				//wait();
-			//} catch (InterruptedException e) {
-			//	System.out.println("Wait Problem");
-			}
-			return balance;
-		//} // end sync
-	}
+		synchronized(this){	
+			System.out.println(Thread.currentThread().getName() + " Checking Balance....");	
+			return balance; 
+		}  // end sync
+	} // end method
 	
 	
 	public  void deposit(int money) { 
@@ -37,10 +33,10 @@ public class BankAccount {
 			}
 			
 			balance = balance - result;
-			// notifyAll();
+			notifyAll();
 			return result;
-		}
-	}
+		}  // end sync
+	} // end method
 	
 	
 }
