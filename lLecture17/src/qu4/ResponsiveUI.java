@@ -1,5 +1,10 @@
 package qu4;
 
+/**
+ * Final design which includes a main(); then a separate Scanner Console Class, which is RUN on the 
+ * Same Thread as main(); and a separate Thread class that calculates the sleep time.
+ */
+
 public class ResponsiveUI {
 
 	
