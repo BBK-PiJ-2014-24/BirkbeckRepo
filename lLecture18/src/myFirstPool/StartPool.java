@@ -22,8 +22,10 @@ public class StartPool {
 		for(int i=0;i<5;i++){
 			
 			Runnable Toji = new TaskToDo(i);  				// Instant Runnable
-			// exec.submit(Toji);							// Simple submit()
+
+			//exec.submit(Toji);							// Simple submit()
 			//exec.submit(new TaskToDo(i));					// Runnable() + Submit() Done in One Step
+			//exec.execute(Toji);							// Using the superInterface Executor to run thread
 			
 			Future fut = exec.submit(Toji);					// Return a Future on a submit
 			System.out.println("Is Thread " + i + " done? " + fut.isDone()); // Simple use of a sumbit()
