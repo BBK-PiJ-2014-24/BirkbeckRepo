@@ -4,7 +4,7 @@ package qu3_4;
 *  
 */
 
-public class Node<E> {   // Use <E>, E standing for Element used in Java Collections
+public class Node<E> implements Comparable <E> {   // Use <E>, E standing for Element used in Java Collections
 	
 	// Fields
 	// ------
@@ -28,7 +28,6 @@ public class Node<E> {   // Use <E>, E standing for Element used in Java Collect
 	
 	public E getData(){
 		return data;
-
 	}
 	
 	public void setNextNode(Node n){
@@ -50,5 +49,25 @@ public class Node<E> {   // Use <E>, E standing for Element used in Java Collect
 	public Node getPrevNode(){
 		return prevNode;
 	}
+	
+	public int compareTo(E otherE){
+		return 0;
+	}
 
+/*
+	public int compareTo(E otherE){
+		if(this.data > otherE)
+			return 1;
+		else if(this.data < otherNode.data)
+			return -1;
+		else
+			return 0;	
+	}
+
+	public int compareTo(Object o){
+		E other = (E) o;
+		if
+		
+	}
+*/	
 }  // end Class
